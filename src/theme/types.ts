@@ -52,6 +52,16 @@ export type Colors = {
   borderColor: string;
   card: string;
 
+  // Buttons
+  button: string;
+
+  // Extra
+  extra: string;
+
+  // Farming
+
+  farming: string;
+
   // Gradients
   gradients: Gradients;
 
