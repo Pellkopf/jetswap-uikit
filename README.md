@@ -1,24 +1,22 @@
-# 🥞 Pancake UIkit
+# 🛢 Jetswap UIkit
 
-**This repository is not used anymore. See the [https://github.com/pancakeswap/pancake-toolkit](Pancake toolkit) instead**
+<!-- [![Version](https://img.shields.io/npm/v/@jetswap-libs/uikit)](https://www.npmjs.com/package/@jetswap-libs/uikit) [![Size](https://img.shields.io/bundlephobia/min/@jetswap-libs/uikit)](https://www.npmjs.com/package/@jetswap-libs/uikit) -->
 
-[![Version](https://img.shields.io/npm/v/@pancakeswap-libs/uikit)](https://www.npmjs.com/package/@pancakeswap-libs/uikit) [![Size](https://img.shields.io/bundlephobia/min/@pancakeswap-libs/uikit)](https://www.npmjs.com/package/@pancakeswap-libs/uikit)
-
-Pancake UIkit is a set of React components and hooks used to build pages on Pancake's apps. It also contains a theme file for dark and light mode.
+Jetswap UIkit is a set of React components and hooks used to build pages on Jetswap's apps. It also contains a theme file for dark and light mode.
 
 ## Install
 
-`yarn add @pancakeswap-libs/uikit`
+`npm i jetswap-uikit`
 
 ## Setup
 
 ### Theme
 
-Before using Pancake UIkit, you need to provide the theme file to styled-component.
+Before using Jetswap UIkit, you need to provide the theme file to styled-component.
 
 ```
 import { ThemeProvider } from 'styled-components'
-import { light, dark } from '@pancakeswap-libs/uikit'
+import { light, dark } from 'jetswap-uikit'
 ...
 <ThemeProvider theme={isDark}>...</ThemeProvider>
 ```
@@ -28,7 +26,7 @@ import { light, dark } from '@pancakeswap-libs/uikit'
 A reset CSS is available as a global styled component.
 
 ```
-import { ResetCSS } from '@pancakeswap-libs/uikit'
+import { ResetCSS } from 'jetswap-uikit'
 ...
 <ResetCSS />
 ```
@@ -39,4 +37,26 @@ This project is built with Typescript and export all the relevant types.
 
 ## How to use the UIkit
 
-If you want to use components from the UIkit, check the [Storybook documentation](https://pancakeswap.github.io/pancake-uikit/)
+If you want to use components from the UIkit, check the [Storybook documentation](https://jetswap.github.io/pancake-uikit/)
+
+## How to Customize UIkit
+
+First clone this repo to local and then start editing the components, theme, etc.
+
+When is finished the Customization of the UIkit build it using:
+
+`npm run build`
+
+Commit everything to the git repo and if you are using a diferent repo just change it in package.json.
+
+If you have a commit error due to husky you can try:
+
+`git commit -am 'commit' --no-verify`
+
+That should solve the problem, then push to remote repo.
+
+After this you need to [publish the npm packege](https://zellwk.com/blog/publish-to-npm/)
+
+Be aware of the versions, If you make an update change the version in package.json so when you publish this's not gonna throw you an error.
+
+Go to the npm package you create an you are ready to use it.

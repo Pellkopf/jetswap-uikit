@@ -42,11 +42,12 @@ const FloatingPanIcon = styled(PanIcon)`
   transform: translate3d(0, 0, 0);
 `;
 
-const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
+const Spinner: React.FC<SpinnerProps> = ({ size = 128, img }) => {
   return (
     <Container>
-      <RotatingPancakeIcon width={`${size * 0.5}px`} />
-      <FloatingPanIcon width={`${size}px`} />
+      {/* <RotatingPancakeIcon width={`${size * 0.5}px`} />
+      <FloatingPanIcon width={`${size}px`} /> */}
+      <img src={img} width={`${size}px`} />
     </Container>
   );
 };

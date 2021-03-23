@@ -1,7 +1,12 @@
 import React from "react";
+import styled from 'styled-components';
 import Button from "../../../components/Button/Button";
 import { useWalletModal } from "../../WalletModal";
 import { Login } from "../../WalletModal/types";
+
+const StyledButton = styled(Button)`
+  color: ${({theme}) => theme.colors.text} 
+`
 
 interface Props {
   account?: string;
@@ -15,24 +20,24 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
   return (
     <div>
       {account ? (
-        <Button
-          scale="sm"
+        <StyledButton
+          scale="md"
           variant="tertiary"
           onClick={() => {
             onPresentAccountModal();
           }}
         >
           {accountEllipsis}
-        </Button>
+        </StyledButton>
       ) : (
-        <Button
-          scale="sm"
+        <StyledButton
+          scale="md"
           onClick={() => {
             onPresentConnectModal();
           }}
         >
-          Connect
-        </Button>
+          Connect Wallet
+        </StyledButton>
       )}
     </div>
   );

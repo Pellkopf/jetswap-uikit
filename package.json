@@ -1,6 +1,6 @@
 {
-  "name": "jetswap-uikit",
-  "version": "0.0.1",
+  "name": "jetswap-uikit2",
+  "version": "0.0.9",
   "description": "Set of UI components for Jetswap projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
